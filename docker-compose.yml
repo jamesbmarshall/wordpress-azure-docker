@@ -1,0 +1,27 @@
+mysql:
+    image: mysql:5.7
+    volumes:
+     - /wordpress/<YOUR DOMAIN>/db/:/var/lib/mysql 
+    restart: always
+    ports:
+     - "127.0.0.1:3307:3306"
+    environment:
+     - MYSQL_ROOT_PASSWORD=<YOUR PASSWORD>
+     - MYSQL_DATABASE=wordpress
+    
+web:
+    links: 
+     - mysql
+    image: wordpress:latest
+    environment:
+     - WORDPRESS_DB_PASSWORD=<YOUR PASSWORD>
+     - VIRTUAL_HOST=<YOUR DOMAIN>
+     - LETSENCRYPT_HOST=<YOUR DOMAIN>
+     - LETSENCRYPT_EMAIL=<YOUR EMAIL>
+    ports:
+     - "127.0.0.1:8082:80"
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+     - /wordpress/<YOUR DOMAIN>/wp-content/:/var/www/html/wp-content
+
