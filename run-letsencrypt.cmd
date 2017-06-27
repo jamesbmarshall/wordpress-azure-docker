@@ -1,1 +1,1 @@
-docker run -d --name letsencrypt -v /wordpress/nginx/certs:/etc/nginx/certs:rw -v /home/james/vhost.d:/etc/nginx/vhost.d:rw -v /usr/share/nginx/html -v /var/run/docker.sock:/var/run/docker.sock:ro --volumes-from nginx-proxy jrcs/letsencrypt-nginx-proxy-companion
+docker run -d --name letsencrypt -v /wordpress/nginx/certs:/etc/nginx/certs:rw -v /home/<USERNAME>/vhost.d:/etc/nginx/vhost.d:rw -v /usr/share/nginx/html -v /var/run/docker.sock:/var/run/docker.sock:ro --volumes-from nginx-proxy jrcs/letsencrypt-nginx-proxy-companion
