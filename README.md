@@ -20,3 +20,7 @@ Set of scripts to create a Ubuntu VM with Docker + nginx + Wordpress + letsencry
     `2. run-letsencrypt.cmd`
     
     `3. run-wp.cmd`
+
+##Acknowledgements
+
+Thank you to [James Akrigg](https://twitter.com/jakrigg) for his input in creating the original scripts upon which these are built.
