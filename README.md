@@ -6,6 +6,8 @@ Set of scripts to create a Ubuntu VM with Docker + nginx + Wordpress + letsencry
 1. Edit docker-compose.yml file to replace <YOUR DOMAIN> with your domain and /`<YOUR DOMAIN>`/ folders with your host storage folder names
 2. Edit docker-compose.yml to set Wordpress password for DB and Wordpress instance
 3. Edit docker-compose.yml to enter domain owner email address for LETSENCRYPT
+4. Edit create-azuredocker.cmd to specify `<USERNAME>` for VM.
+4. Edit run-letsencrypt.cmd and run-nginx.cmd to update `<USERNAME>` with the one specificed when you created the Azure VM.
 
 ### Running the containers
 
